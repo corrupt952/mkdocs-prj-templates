@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -o errexit
+set -o pipefail
+
+ROOT_DIR_PATH="$(dirname $(dirname $(realpath $0)))"
+# or ROOT_DIR_PATH="$(git rev-parse --show-toplevel)"
+DOCKER_COMPOSE_FILE_PATH="${ROOT_DIR_PATH}/docs/docker-compose.yaml"
+
+docker-compose -f $DOCKER_COMPOSE_FILE_PATH $@

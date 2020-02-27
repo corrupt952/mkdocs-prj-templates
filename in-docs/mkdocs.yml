@@ -1,0 +1,19 @@
+site_name: In Docs - MkDocs Prj Templates
+repo_url: https://github.com/corrupt952/mkdocs-prj-templates
+strict: true
+plugins:
+  - exclude:
+      glob:
+        - Dockerfile
+        - docker-compose.yaml
+theme:
+  name: material
+  palette:
+    primary: cyan
+markdown_extensions:
+- codehilite
+- admonition
+- toc:
+    permalink: true
+nav:
+  - index.md
